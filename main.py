@@ -5,6 +5,7 @@ import sys
 
 class Game:
   def __init__(self):
+    # game window and frame rate
     pygame.init()
     self.screen = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
     self.clock = pygame.time.Clock()
@@ -12,6 +13,7 @@ class Game:
 
     pygame.display.set_caption("Rattle 'em Boys!")
 
+  # tilemap - map in code
   def createTilemap(self):
     for i, row in enumerate(tilemap):
       for j, column in enumerate(row):
