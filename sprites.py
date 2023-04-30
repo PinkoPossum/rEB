@@ -3,6 +3,10 @@ from config import *
 import math
 import random
 
+# class SpriteSheet:
+
+
+
 class Player(pygame.sprite.Sprite):
   def __init__(self, game, x, y):
     self.game = game
@@ -20,8 +24,10 @@ class Player(pygame.sprite.Sprite):
 
     self.facing = 'down'
 
+    image_to_load = pygame.image.load("spriteSheets/skeltonIdleDown.png")
     self.image = pygame.Surface([self.width, self.height])
-    self.image.fill(RED)
+    self.image.set_colorkey(BLACK)
+    self.image.blit(image_to_load, (0,0))
 
     self.rect = self.image.get_rect()
     self.rect.x = self.x
